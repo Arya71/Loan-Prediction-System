@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Visualizations</h2>
+        <h3>CSV File with Predictions</h3>
+        <a href="{{ url_for('static', filename='uploaded_files/' + csv_file) }}" download>Download CSV File</a><br><br>
+
+        <h3>Generated Visualizations</h3>
+        {% for image in images %}
+            <img src="{{ url_for('static', filename=image) }}" alt="Visualization" style="width:100%; max-width:600px;"><br><br>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Loan Eligibility Form</h2>
+        <form method="POST">
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="Married">Married:</label>
+            <select name="Married" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="Dependents">Dependents:</label>
+            <select name="Dependents" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3+">3+</option>
+            </select>
+
+            <label for="Education">Education:</label>
+            <select name="Education" required>
+                <option value="Graduate">Graduate</option>
+                <option value="Not Graduate">Not Graduate</option>
+            </select>
+
+            <label for="Self_Employed">Self Employed:</label>
+            <select name="Self_Employed" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="ApplicantIncome">Applicant Income:</label>
+            <input type="number" name="ApplicantIncome" placeholder="Applicant Income" required>
+
+            <label for="CoapplicantIncome">Coapplicant Income:</label>
+            <input type="number" name="CoapplicantIncome" placeholder="Coapplicant Income" required>
+
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="number" name="LoanAmount" placeholder="Loan Amount" required>
+
+            <label for="Loan_Amount_Term">Loan Amount Term:</label>
+            <input type="number" name="Loan_Amount_Term" placeholder="Loan Amount Term" required>
+
+            <label for="Credit_History">Credit History:</label>
+            <input type="number" name="Credit_History" placeholder="Credit History" required>
+
+            <label for="Property_Area">Property Area:</label>
+            <select name="Property_Area" required>
+                <option value="Urban">Urban</option>
+                <option value="Semiurban">Semiurban</option>
+                <option value="Rural">Rural</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

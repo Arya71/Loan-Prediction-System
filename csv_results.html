@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Results</title>
+</head>
+<body>
+    <h1>CSV Upload Results</h1>
+    <p>File uploaded: {{ file_name }}</p>
+    <p>Visualization:</p>
+    <img src="{{ image_url }}" alt="Visualization">
+    <p><a href="{{ url_for('uploaded_file', filename=file_name) }}" download>Download CSV with Predictions</a></p>
+</body>
+</html>
